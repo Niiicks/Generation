@@ -1,0 +1,21 @@
+package Exercicios;
+//Ler 10 números e imprimir quantos são pares e quantos são ímpares. (FOR)
+import java.util.Scanner;
+
+public class ex2 {
+public static void main(String[] args) {
+	int par = 0, num, imp = 0;
+	@SuppressWarnings("resource")
+	Scanner x = new Scanner(System.in);
+	for (int i = 0; i < 10; i++) {
+		System.out.println("Digite um número: ");
+		num = x.nextInt();
+		if (num%2 == 0) {
+			par ++;
+		} else {
+			imp++;
+		}		
+	}
+	System.out.printf("Total de %d números pares e %d número ímpares.", par, imp);
+}
+}

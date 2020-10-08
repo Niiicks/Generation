@@ -1,0 +1,68 @@
+/*Uma empresa desenvolveu uma pesquisa para saber as características psicológicas dos indivíduos de uma região. 
+ * Para tanto, a cada uma das pessoas era perguntado: idade, sexo (1-feminino / 2-masculino / 3-Outros), e as opções
+ *  (1, se a pessoa era calma; 2, se a pessoa era nervosa e 3, se a pessoa era agressiva). 
+ *  Pede-se para elaborar um sistema que permita ler os dados de 150 pessoas, calcule e mostre: (WHILE)
+
+o número de pessoas calmas; 
+o número de mulheres nervosas; 
+o número de homens agressivos; 
+o número de outros calmos;
+o número de pessoas nervosas com mais de 40 anos; 
+o número de pessoas calmas com menos de 18 anos.
+*/
+
+package Exercicios;
+
+import java.util.Scanner;
+
+public class ex4 {
+public static void main(String[] args) {
+	int  pCalmas = 0, mNerv = 0, hAgre = 0, oCalmos = 0, pNervMais40 = 0, calmaMenos18 = 0, pessoas, i = 1, idade, nervos, sexo;	
+	
+	Scanner ler = new Scanner(System.in);
+	
+	System.out.println("Digite a quantidade de entrevistados: ");
+	pessoas = ler.nextInt();
+	
+	while(i != pessoas+1) {
+		
+		System.out.println("Idade "+ i + ": ");	
+		idade = ler.nextInt();
+		
+		System.out.println("Sexo "+ i +" Digite [1]Feminino [2]Masculino [3]Outro" +": ");	
+		sexo = ler.nextInt();
+		
+		System.out.println("Temperamento "+ i +" Digite [1]Calmo(a) [2]Nervoso(a) [3]Agressivo(a)" +": ");	
+		nervos = ler.nextInt();
+		
+		if(nervos == 1) {
+			pCalmas ++;
+		}
+		if(sexo == 1 && nervos == 2) {
+			mNerv++;
+		}
+		if(sexo == 2 && nervos == 3) {
+			hAgre++;
+		}
+		if(sexo == 3 && nervos == 1) {
+			oCalmos++;
+		}
+		if(idade > 40 && nervos == 2) {
+			pNervMais40++;
+		}
+		if (idade < 18 && nervos == 1) {
+			calmaMenos18++;
+		}
+		
+		i++;
+	}
+	System.out.println("\nTotal de pessoas calmas: "+ pCalmas);
+	System.out.println("\nTotal de mulheres nervosas: "+ mNerv);
+	System.out.println("\nTotal de homens agressivos: "+ hAgre);
+	System.out.println("\nTotal de Outros(sexo) calmos: "+ oCalmos);
+	System.out.println("\nTotal de pessoas nervosas com mais de 40 anos: "+pNervMais40);
+	System.out.println("\nTotal de pessoas calmas com menos de 18 anos: "+calmaMenos18);
+}
+}
+
+

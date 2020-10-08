@@ -1,0 +1,10 @@
+package Exercicios;
+
+public class Ex1 {
+	public static void main(String[] args) {
+	
+		for (int i = 1000; i < 1005; i++) {
+				System.out.println(i);
+		}
+	}
+}
