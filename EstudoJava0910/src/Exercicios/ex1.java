@@ -19,7 +19,7 @@ public class ex1 {
 			}
 			System.out.println("["+A[i]	+"]");
 		}
-		soma = A[0]+ A[1] +A[5];
+		int soma = A[0]+ A[1] +A[5];
 		System.out.println("Soma das posições 0, 1 e 5: "+ soma);
 	}
 }
