@@ -37,6 +37,7 @@ public class Postagem {
 	@JsonIgnoreProperties("postagem")
 	private Tema tema;
 
+	
 	public long getId() {
 		return id;
 	}
